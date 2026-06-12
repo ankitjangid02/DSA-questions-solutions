@@ -1,0 +1,94 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "testing",
+      "request": "launch",
+      "mainClass": "testing",
+      "projectName": "java_a76c02b4"
+    },
+    {
+      "type": "java",
+      "name": "Test",
+      "request": "launch",
+      "mainClass": "Test",
+      "projectName": "java_a76c02b4"
+    },
+    {
+      "type": "java",
+      "name": "Printarray",
+      "request": "launch",
+      "mainClass": "Printarray",
+      "projectName": "java_a76c02b4"
+    },
+    {
+      "type": "java",
+      "name": "pat",
+      "request": "launch",
+      "mainClass": "pat",
+      "projectName": "java_a76c02b4"
+    },
+    {
+      "type": "java",
+      "name": "C",
+      "request": "launch",
+      "mainClass": "C",
+      "projectName": "java_a76c02b4"
+    },
+    {
+      "type": "java",
+      "name": "Examp",
+      "request": "launch",
+      "mainClass": "Examp",
+      "projectName": "java_a76c02b4"
+    },
+    {
+      "type": "java",
+      "name": "Ex1112",
+      "request": "launch",
+      "mainClass": "Ex1112",
+      "projectName": "java_a76c02b4"
+    },
+    {
+      "type": "java",
+      "name": "Army",
+      "request": "launch",
+      "mainClass": "Army",
+      "projectName": "java_a76c02b4"
+    },
+    {
+      "type": "java",
+      "name": "Demo",
+      "request": "launch",
+      "mainClass": "Demo",
+      "projectName": "java_a76c02b4"
+    },
+    {
+      "type": "java",
+      "name": "Ex",
+      "request": "launch",
+      "mainClass": "Ex",
+      "projectName": "java_a76c02b4"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "d:/PT/java",
+      "program": "d:/PT/java/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
