@@ -35,16 +35,14 @@ int lastOccurence(vector<int>& arr, int k){
     return last;
 }
 
-pair<int,int> firstAndLastPosition(vector<int>& arr, int k){
-    int first = firstOccurence(arr,k);
-    if(first == -1) return {-1,-1};
-    return {first, lastOccurence(arr,k)};
+int countOccurence(vector<int>& arr, int k){
+    if(firstOccurence(arr,k)==-1) return 0;
+    return {lastOccurence(arr,k)-firstOccurence(arr,k)+1};
 }
 
 int main() {
     vector<int> nums={2,8,8,8,8,8,11,13};
     vector<int>& arr=nums;
-    pair<int,int> p = firstAndLastPosition(arr,8);
-    cout<<p.first<<' '<<p.second;
+    cout<<countOccurence(arr,8);
     return 0;
 }
