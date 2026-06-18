@@ -10,7 +10,7 @@ int findMinNum(vector<int>& nums){
         
         // if already sorted
         if(nums[low]<=nums[high]){
-            if(ans<nums[low]){
+            if(ans>nums[low]){
                 ans=nums[low];
             }
             break;
