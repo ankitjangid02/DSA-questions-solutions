@@ -3,13 +3,16 @@ using namespace std;
 
 void merge(vector<int>& nums1, int m, vector<int>& nums2, int n){
     vector<int> arr;
-    for(int i=0; i<m; i++){
-        arr.push_back(nums1[i]);
+    int a=0;
+    for(int i=n; i<m+n; i++){
+        nums1[i]=nums2[a];
+        a++;
     }
-    for(int i=0; i<n; i++){
-        arr.push_back(nums2[i]);
-    }
-    for(int x:arr){
+    sort(nums1.begin(),nums1.end());
+    // for(int i=0; i<n; i++){
+    //     arr.push_back(nums2[i]);
+    // }
+    for(int x:nums1){
         cout<<x<<',';
     }
 }
