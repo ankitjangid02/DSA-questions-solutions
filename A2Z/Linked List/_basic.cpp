@@ -30,6 +30,16 @@ Node* convertArr2LL(vector<int> &arr){
     return head;
 }
 
+int lengthOfLL(Node* head){
+    Node* temp=head;
+    int n=0;
+    while(temp){
+        temp=temp->next;
+        n++;
+    }
+    return n;
+}
+
 int main() {
     vector<int> arr={12,5,8,7};
     // Node y=Node(arr[0], nullptr);
@@ -45,5 +55,7 @@ int main() {
         cout<<temp->data<<" ";
         temp=temp->next;
     }
+    cout<<endl;
+    cout<<lengthOfLL(head);
     return 0;
 }
