@@ -39,6 +39,11 @@ int main() {
     // cout<<x->data;
     
     Node* head=convertArr2LL(arr);
-    cout<<head->data;
+    // cout<<head->data;
+    Node* temp=head;
+    while(temp){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
     return 0;
 }
