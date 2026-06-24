@@ -70,6 +70,30 @@ Node* insertTail(Node* head, int val){
     return head;
 }
 
+//insert at k postion
+Node* insertK(Node* head, int el, int k){
+    if(head==NULL){
+        if(k==1) return new Node(el);  
+        else NULL;
+    } 
+    if(k==1) return new Node(el, head);
+    
+    Node* temp=head;
+    Node* next=head->next;
+    int cnt=0;
+    while(temp->next!=NULL){
+        cnt++;
+        if(cnt!=k){
+            temp=temp->next;
+            next=next->next;
+            break;
+        }
+    }
+    Node* newNode= new Node(el,next);
+    temp->next=newNode;
+    return head;
+}
+
 int main() {
     vector<int> arr={12,5,8,7,6,9,10};
     
@@ -80,6 +104,8 @@ int main() {
     head=new Node(500, head);
     print(head);
     head=insertTail(head, 99);
+    print(head);
+    head=insertK(head, 0, 1);
     print(head);
 
     return 0;
