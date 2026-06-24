@@ -37,72 +37,36 @@ void print(Node* head){
     cout<<endl;
 }
 
-// delete head
-Node* removeHead(Node* head){
-    if(head==NULL) return head;
-    Node* temp=head;
-    head=head->next;
-    delete temp;
-    return head;
+// insert at head
+Node* insertHead(Node* head, int val){
+    if(head==NULL){
+        return new Node(val);
+    }
+    // Node* temp=new Node(val,head);
+    // return temp;
+    return new Node(val,head);
 }
 
-//delete tail
-Node* removeTail(Node* head){
-    if(head==NULL || head->next==NULL) return NULL;
-    Node* tail= head;
-    while(tail->next->next){
-        tail=tail->next;
+//insert tail
+Node* insertTail(Node* head, int val){
+    if(head==NULL){
+        return new Node(val);
     }
-    delete tail->next;
-    tail->next=nullptr;
-    return head;
-}
-
-//delete position
-Node* removeK(Node* head, int k){
-    if(head==NULL) return head;
-    if(k==1){
-        Node* temp=head;
-        head=head->next;
-        free(temp);
-        return head;
-    }
-    int cnt=0;
+    
+    // Node* temp=new Node(val);
+    // Node* tail=head;
+    // while(tail->next!=NULL){
+    //     tail=tail->next;
+    // }
+    // tail->next=temp;
+    // return head;
+    
     Node* temp=head;
-    Node* prev=NULL;
-    while(temp){
-        cnt++;
-        if(cnt==k){
-            prev->next=prev->next->next;
-            free(temp);
-            break;
-        }
-        prev=temp;
+    while(temp->next!=NULL){
         temp=temp->next;
     }
-    return head;
-}
-
-//delete value
-Node* removeEl(Node* head, int el){
-    if(head==NULL) return head;
-    if(head->data==el){
-        Node* temp=head;
-        head=head->next;
-        free(temp);
-        return head;
-    }
-    Node* temp=head;
-    Node* prev=NULL;
-    while(temp){
-        if(temp->data==el){
-            prev->next=prev->next->next;
-            free(temp);
-            break;
-        }
-        prev=temp;
-        temp=temp->next;
-    }
+    Node* newNode=new Node(val);
+    temp->next=newNode;
     return head;
 }
 
@@ -111,13 +75,11 @@ int main() {
     
     Node* head=convertArr2LL(arr);
     print(head);
-    head=removeHead(head);
+    head=insertHead(head, 100);
     print(head);
-    head=removeTail(head);
+    head=new Node(500, head);
     print(head);
-    head=removeK(head,5);
-    print(head);
-    head=removeEl(head,8);
+    head=insertTail(head, 99);
     print(head);
 
     return 0;
