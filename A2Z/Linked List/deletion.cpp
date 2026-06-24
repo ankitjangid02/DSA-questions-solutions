@@ -47,7 +47,7 @@ Node* removeHead(Node* head){
 }
 
 //delete tail
-Node* deleteTail(Node* head){
+Node* removeTail(Node* head){
     if(head==NULL || head->next==NULL) return NULL;
     Node* tail= head;
     while(tail->next->next){
@@ -65,7 +65,7 @@ int main() {
     print(head);
     head=removeHead(head);
     print(head);
-    head=deleteTail(head);
+    head=removeTail(head);
     print(head);
 
     return 0;
