@@ -39,8 +39,9 @@ void print(Node* head){
 
 // insert at head
 Node* insertHead(Node* head, int val){
-    Node* temp=new Node(val,head);
-    return temp;
+    // Node* temp=new Node(val,head);
+    // return temp;
+    return new Node(val,head);
 }
 
 int main() {
