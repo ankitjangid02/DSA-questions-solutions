@@ -74,23 +74,28 @@ Node* insertTail(Node* head, int val){
 Node* insertK(Node* head, int el, int k){
     if(head==NULL){
         if(k==1) return new Node(el);  
-        else NULL;
+        else return head;
     } 
     if(k==1) return new Node(el, head);
     
     Node* temp=head;
-    Node* next=head->next;
     int cnt=0;
     while(temp->next!=NULL){
         cnt++;
-        if(cnt!=k){
-            temp=temp->next;
-            next=next->next;
-            break;
+        if(cnt==k-1){
+            Node* x=new Node(el);
+            x->next=temp->next;
+            temp->next=x;
+            return head;
         }
+        temp=temp->next;
     }
-    Node* newNode= new Node(el,next);
-    temp->next=newNode;
+    cnt++;
+    if(cnt==k-1){
+        Node* x=new Node(el);
+        x->next=temp->next;
+        temp->next=x;
+    }
     return head;
 }
 
@@ -105,7 +110,7 @@ int main() {
     print(head);
     head=insertTail(head, 99);
     print(head);
-    head=insertK(head, 0, 1);
+    head=insertK(head, 0, 6);
     print(head);
 
     return 0;
