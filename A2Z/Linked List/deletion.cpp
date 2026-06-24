@@ -37,6 +37,7 @@ void print(Node* head){
     cout<<endl;
 }
 
+// delete head
 Node* removeHead(Node* head){
     if(head==NULL) return head;
     Node* temp=head;
