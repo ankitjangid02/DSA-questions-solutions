@@ -80,7 +80,7 @@ Node* insertK(Node* head, int el, int k){
     
     Node* temp=head;
     int cnt=0;
-    while(temp->next!=NULL){
+    while(temp){
         cnt++;
         if(cnt==k-1){
             Node* x=new Node(el);
@@ -89,12 +89,6 @@ Node* insertK(Node* head, int el, int k){
             return head;
         }
         temp=temp->next;
-    }
-    cnt++;
-    if(cnt==k-1){
-        Node* x=new Node(el);
-        x->next=temp->next;
-        temp->next=x;
     }
     return head;
 }
