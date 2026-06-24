@@ -39,9 +39,26 @@ void print(Node* head){
 
 // insert at head
 Node* insertHead(Node* head, int val){
+    if(head==NULL){
+        return new Node(val);
+    }
     // Node* temp=new Node(val,head);
     // return temp;
     return new Node(val,head);
+}
+
+//insert tail
+Node* insertTail(Node* head, int val){
+    if(head==NULL){
+        return new Node(val);
+    }
+    Node* temp=new Node(val);
+    Node* tail=head;
+    while(tail->next!=NULL){
+        tail=tail->next;
+    }
+    tail->next=temp;
+    return head;
 }
 
 int main() {
@@ -50,6 +67,10 @@ int main() {
     Node* head=convertArr2LL(arr);
     print(head);
     head=insertHead(head, 100);
+    print(head);
+    head=new Node(500, head);
+    print(head);
+    head=insertTail(head, 99);
     print(head);
 
     return 0;
