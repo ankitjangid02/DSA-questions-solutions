@@ -93,6 +93,25 @@ Node* insertK(Node* head, int el, int k){
     return head;
 }
 
+//insert before value
+Node* insertBeforeValue(Node* head, int el, int val){
+    if(head==NULL){
+        return NULL;  
+    } 
+    if(head->data==val) return new Node(el, head);
+    
+    Node* temp=head;
+    while(temp->next!=NULL){
+        if(temp->next->data==val){
+            Node* x=new Node(el, temp->next);
+            temp->next=x;
+            return head;
+        }
+        temp=temp->next;
+    }
+    return head;
+}
+
 int main() {
     vector<int> arr={12,5,8,7,6,9,10};
     
@@ -105,6 +124,8 @@ int main() {
     head=insertTail(head, 99);
     print(head);
     head=insertK(head, 0, 6);
+    print(head);
+    head=insertBeforeValue(head, 66, 99);
     print(head);
 
     return 0;
