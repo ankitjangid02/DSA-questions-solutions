@@ -83,8 +83,7 @@ Node* insertK(Node* head, int el, int k){
     while(temp){
         cnt++;
         if(cnt==k-1){
-            Node* x=new Node(el);
-            x->next=temp->next;
+            Node* x=new Node(el, temp->next);
             temp->next=x;
             return head;
         }
@@ -125,7 +124,7 @@ int main() {
     print(head);
     head=insertK(head, 0, 6);
     print(head);
-    head=insertBeforeValue(head, 66, 99);
+    head=insertBeforeValue(head, 66, 0);
     print(head);
 
     return 0;
