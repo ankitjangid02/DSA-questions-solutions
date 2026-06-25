@@ -48,11 +48,22 @@ Node* insertHead(Node* head, int val){
     return head;
 }
 
+// insert tail
+Node* insertTail(Node* head, int val){
+    Node* tail=head;
+    while(tail->next!=NULL) tail=tail->next;
+    Node* temp=new Node(val, nullptr, tail);
+    tail->next=temp;
+    return head;
+}
+
 int main() {
     vector<int> arr={12,5,8,7};
     Node* head = convertArr2DLL(arr);
     print(head);
     head=insertHead(head,10);
+    print(head);
+    head=insertTail(head,15);
     print(head);
     
     return 0;
