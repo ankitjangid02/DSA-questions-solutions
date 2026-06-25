@@ -42,6 +42,7 @@ void print(Node* head){
 
 // insert head
 Node* insertHead(Node* head, int val){
+    if(head==NULL) return new Node(val);
     Node*temp=new Node(val, head, nullptr);
     head->back=temp;
     head=temp;
