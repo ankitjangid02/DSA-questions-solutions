@@ -50,6 +50,7 @@ Node* insertHead(Node* head, int val){
 
 // insert tail
 Node* insertTail(Node* head, int val){
+    if(head==NULL) return new Node(val);
     Node* tail=head;
     while(tail->next!=NULL) tail=tail->next;
     Node* temp=new Node(val, nullptr, tail);
