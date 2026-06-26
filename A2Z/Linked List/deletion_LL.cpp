@@ -37,77 +37,12 @@ void print(Node* head){
     cout<<endl;
 }
 
-// insert at head
-Node* insertHead(Node* head, int val){
-    if(head==NULL){
-        return new Node(val);
-    }
-    // Node* temp=new Node(val,head);
-    // return temp;
-    return new Node(val,head);
-}
-
-//insert tail
-Node* insertTail(Node* head, int val){
-    if(head==NULL){
-        return new Node(val);
-    }
-    
-    // Node* temp=new Node(val);
-    // Node* tail=head;
-    // while(tail->next!=NULL){
-    //     tail=tail->next;
-    // }
-    // tail->next=temp;
-    // return head;
-    
+// remove head
+Node* removeHead(Node* head){
+    if(head==NULL) return head;
     Node* temp=head;
-    while(temp->next!=NULL){
-        temp=temp->next;
-    }
-    Node* newNode=new Node(val);
-    temp->next=newNode;
-    return head;
-}
-
-//insert at k postion
-Node* insertK(Node* head, int el, int k){
-    if(head==NULL){
-        if(k==1) return new Node(el);  
-        else return head;
-    } 
-    if(k==1) return new Node(el, head);
-    
-    Node* temp=head;
-    int cnt=0;
-    while(temp){
-        cnt++;
-        if(cnt==k-1){
-            Node* x=new Node(el, temp->next);
-            temp->next=x;
-            return head;
-        }
-        temp=temp->next;
-    }
-    return head;
-}
-
-//insert before value
-Node* insertBeforeValue(Node* head, int el, int val){
-    if(head==NULL){
-        return NULL;  
-    } 
-    if(head->data==val) return new Node(el, head);
-    
-    Node* temp=head;
-    while(temp->next!=NULL){
-        if(temp->next->data==val){
-            Node* x=new Node(el, temp->next);
-            temp->next=x;
-            return head;
-        }
-        temp=temp->next;
-    }
+    head=head->next;
+    delete temp;
     return head;
 }
 
@@ -116,16 +51,9 @@ int main() {
     
     Node* head=convertArr2LL(arr);
     print(head);
-    head=insertHead(head, 100);
+    head=removeHead(head);
     print(head);
-    head=new Node(500, head);
-    print(head);
-    head=insertTail(head, 99);
-    print(head);
-    head=insertK(head, 0, 6);
-    print(head);
-    head=insertBeforeValue(head, 66, 0);
-    print(head);
+    
 
     return 0;
 }   
