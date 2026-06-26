@@ -41,22 +41,31 @@ void print(Node* head){
     cout<<endl;
 }
 
-// reverse
-void reverseDLL(Node* head){
+// reverse 
+Node* reverseDLL(Node* head){
+    if(head==NULL || head->next==NULL) return head;
     Node* curr=head;
-    while(curr->next!=NULL) curr=curr->next;
+    Node* last=NULL;
     while(curr){
-        cout<<curr->data<<" ";
+        last=curr->back;
+        
+        curr->back=curr->next;
+        curr->next=last;
+        
         curr=curr->back;
     }
-    cout<<endl;
+    head=last->back;
+    return head;
 }
+
+
 
 int main() {
     vector<int> arr={12,5,8,7};
     Node* head = convertArr2DLL(arr);
     print(head);
-    reverseDLL(head);
+    head=reverseDLL(head);
+    print(head);
 
     return 0;
 }
