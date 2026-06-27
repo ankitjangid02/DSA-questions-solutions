@@ -39,6 +39,8 @@ void print(Node* head){
 
 // sorting 0s 1s 2s in LL
 Node* sort0s1s2s(Node* head){
+    if(!head || !head->next) return head;
+    
     Node* temp=head;
     
     Node* dummyNode0=new Node(-1);
