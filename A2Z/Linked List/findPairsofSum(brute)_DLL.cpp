@@ -64,17 +64,12 @@ vector<pair<int,int>> findPairsofSum(Node* head, int sum){
 
 int main() {
     vector<int> arr = {1,1,1,3,4};
-
     Node* head = convertArr2LL(arr);
-
     print(head);
-
     vector<pair<int,int>> p = findPairsofSum(head, 5);
-
     cout << "Pairs:\n";
     for(auto o : p){
         cout << o.first << " " << o.second << endl;
     }
-
     return 0;
 }   
