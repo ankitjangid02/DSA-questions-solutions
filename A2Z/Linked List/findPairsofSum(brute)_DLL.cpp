@@ -43,33 +43,29 @@ void print(Node* head){
 }
 
 vector<pair<int,int>> findPairsofSum(Node* head, int sum){
-    Node* temp1 = head;
+    Node* temp1=head;
     vector<pair<int,int>> ds;
-
     while(temp1){
-        Node* temp2 = temp1->next;
-
-        while(temp2){
-            if(temp1->data + temp2->data == sum){
+        Node* temp2=temp1->next;
+        while(temp2  && temp1->data+temp2->data<=sum){
+            if(temp1->data+temp2->data==sum){
                 ds.push_back({temp1->data, temp2->data});
             }
-            temp2 = temp2->next;
+            temp2=temp2->next;
         }
-
-        temp1 = temp1->next;
+        temp1=temp1->next;
     }
-
     return ds;
 }
 
 int main() {
-    vector<int> arr = {1,1,1,3,4};
-    Node* head = convertArr2LL(arr);
+    vector<int> arr={1,2,3,4,6};
+
+    Node* head=convertArr2LL(arr);
     print(head);
-    vector<pair<int,int>> p = findPairsofSum(head, 5);
-    cout << "Pairs:\n";
-    for(auto o : p){
-        cout << o.first << " " << o.second << endl;
+    vector<pair<int,int>> p=findPairsofSum(head,5);
+    for(auto o:p){
+        cout<<o.first<<" "<<o.second<<endl;
     }
     return 0;
 }   
