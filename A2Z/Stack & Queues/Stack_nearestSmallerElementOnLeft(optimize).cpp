@@ -7,9 +7,7 @@ vector<int> nearestSmallerElementOnLeft(vector<int>& arr){
     
     for(int i=0; i<arr.size(); i++){
         while(!s.empty() && s.top()>=arr[i]) s.pop();
-        if(s.empty()) nse[i]=-1;
-        else if(s.top()<arr[i]) nse[i]=s.top();
-        else nse[i]=-1;
+        nse[i]=(s.empty())?-1:s.top();
         s.push(arr[i]);
     }
     
