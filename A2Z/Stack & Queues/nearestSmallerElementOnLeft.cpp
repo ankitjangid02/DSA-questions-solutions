@@ -2,7 +2,6 @@
 using namespace std;
 
 vector<int> nearestSmallerElementOnLeft(vector<int>& arr){
-    stack<int> s;
     vector<int> nge(arr.size(),-1);
     
     for(int i=0; i<arr.size(); i++){
