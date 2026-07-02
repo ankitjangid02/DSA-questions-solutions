@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+long long subArrayRanges(vector<int>& arr) {
+    int n=arr.size();
+    long long sum=0;
+    
+    for(int i=0; i<n; i++){
+        int largest=arr[i];
+        int smallest=arr[i];
+        
+        for(int j=i+1; j<n; j++){
+            largest=max(largest, arr[j]);
+            smallest=min(smallest, arr[j]);
+            
+            sum+=largest-smallest;
+        }
+    }
+    return sum;
+}
+
+int main() {
+    vector<int> arr={1,4,3,2};
+    cout<<subArrayRanges(arr);
+   
+    
+
+    return 0;
+}
