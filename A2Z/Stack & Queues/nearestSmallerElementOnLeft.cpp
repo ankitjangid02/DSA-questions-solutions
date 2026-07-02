@@ -2,18 +2,18 @@
 using namespace std;
 
 vector<int> nearestSmallerElementOnLeft(vector<int>& arr){
-    vector<int> nge(arr.size(),-1);
+    vector<int> nse(arr.size(),-1);
     
     for(int i=0; i<arr.size(); i++){
         for(int j=i-1; j>=0; j--){
             if(arr[j]<arr[i]){
-                nge[i]=arr[j];
+                nse[i]=arr[j];
                 break;
             }
         }
     }
     
-    return nge;
+    return nse;
 }
 
 int main() {
