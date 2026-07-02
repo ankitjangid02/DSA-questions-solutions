@@ -3,26 +3,18 @@ using namespace std;
 
 vector<int> nextGreaterElement(vector<int>& arr){
     stack<int> s;
+    vector<int> nge(arr.size());
     
     for(int i=arr.size()-1; i>=0; i--){
-        int temp=arr[i];
-        if(s.empty()){
-            s.push(temp);
-            arr[i]=-1;
-        }
-        else if(s.top()>temp){
-            arr[i]=s.top();
-            s.push(temp);
-        }
-        else if(s.top()<temp){
-            while(!s.empty() && s.top()<=temp) s.pop();
-            if(s.empty()) arr[i]=-1;
-            else arr[i]=s.top();
-            s.push(temp);
-        }
+        while(!s.empty() && s.top()<=arr[i]) s.pop();
+        
+        if(s.empty()) nge[i]=-1;
+        else nge[i]=s.top();
+        
+        s.push(arr[i]);
     }
     
-    return arr;
+    return nge;
 }
 
 int main() {
