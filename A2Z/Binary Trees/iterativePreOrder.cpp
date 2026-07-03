@@ -24,6 +24,7 @@ void iterativePreOrder(Node* root){
         if(root->right!=nullptr) s.push(root->right);
         if(root->left!=nullptr) s.push(root->left);
     }
+
     for(int i:preOrder) cout<<i<<" ";
 }
 
