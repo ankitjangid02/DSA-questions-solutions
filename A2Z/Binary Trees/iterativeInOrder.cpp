@@ -30,6 +30,7 @@ void iterativeInOrder(Node* root){
             node=node->right;
         }
     }
+
     for(int i:inOrder) cout<<i<<" ";
 }
 
