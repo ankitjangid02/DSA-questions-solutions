@@ -27,14 +27,6 @@ void iterativePreOrder(Node* root){
     for(int i:preOrder) cout<<i<<" ";
 }
 
-void preOrder(Node* root){
-    if(root==nullptr) return;
-    
-    cout<<root->data<<" ";
-    preOrder(root->left);
-    preOrder(root->right);
-}
-
 int main() {
     Node* root=new Node(1);
     root->left=new Node(2);
