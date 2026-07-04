@@ -25,6 +25,7 @@ bool getPath(Node* root, vector<int> &arr, int x){
     return false;
 }
 
+// original solution function
 vector<int> solve(Node* root, int x){
     vector<int> arr;
     
