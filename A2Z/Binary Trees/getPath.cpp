@@ -11,6 +11,7 @@ struct Node{
     }
 };
 
+// get path function
 bool getPath(Node* root, vector<int> &arr, int x){
     if(!root) return false;
     
