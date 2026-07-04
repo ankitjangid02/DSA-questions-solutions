@@ -48,8 +48,6 @@ int main() {
      for(int x:path){
          cout<<x<<" "; 
      }
-    
-    // cout<<maxDepth(root);
-    
+        
     return 0;
 }
