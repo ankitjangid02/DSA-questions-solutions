@@ -27,7 +27,7 @@ bool getPath(Node* root, vector<int> &arr, int x){
 vector<int> solve(Node* root, int x){
     vector<int> arr;
     
-    if(A==nullptr) return arr;
+    if(root==nullptr) return arr;
     
     getPath(root, arr, x);
     return arr;
