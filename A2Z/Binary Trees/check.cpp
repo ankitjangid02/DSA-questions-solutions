@@ -41,8 +41,7 @@ int main() {
     root->left=new Node(2);
     root->right=new Node(3);
     root->left->right=new Node(5);
-    // root->left->right->right=new Node(6);
-    // root->left->right->right->right=new Node(7);
+
     
     cout<<check(root);
     
