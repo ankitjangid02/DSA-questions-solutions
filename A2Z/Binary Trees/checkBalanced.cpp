@@ -20,7 +20,7 @@ int maxDepth(Node* root){
     return 1+max(l,r);
 }
 
-bool check(Node* root){
+bool checkBalanced(Node* root){
     if(root==nullptr) return true;
     
     int l=maxDepth(root->left);
@@ -28,8 +28,8 @@ bool check(Node* root){
     
     if(abs(l-r)>1) return false;
     
-    bool left=check(root->left);
-    bool right=check(root->right);
+    bool left=checkBalanced(root->left);
+    bool right=checkBalanced(root->right);
     
     if(!left || !right) return false;
     
@@ -42,7 +42,7 @@ int main() {
     root->right=new Node(3);
     root->left->right=new Node(5);
     
-    cout<<check(root);
+    cout<<checkBalanced(root);
     
     return 0;
 }
