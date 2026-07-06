@@ -30,7 +30,9 @@ vector<int> topView(Node* root){
             q.push({node->right, line+1});
         }
     }
-    for(auto it:mpp) ans.push_back(it.second);
+    for(auto it:mpp){
+	ans.push_back(it.second);
+    }
     return ans;
 }
 
