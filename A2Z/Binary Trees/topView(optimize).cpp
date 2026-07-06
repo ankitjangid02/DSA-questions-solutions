@@ -43,6 +43,7 @@ int main() {
     root->right->right=new Node(6);
     
     vector<int> arr=topView(root);
+
     for(int i:arr) cout<<i<<" ";
     
     return 0;
