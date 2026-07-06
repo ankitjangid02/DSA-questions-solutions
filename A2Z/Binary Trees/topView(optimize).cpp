@@ -16,6 +16,7 @@ vector<int> topView(Node* root){
     map<int,int> mpp;
     queue<pair<Node*, int>> q;
     q.push({root, 0});
+    
     while(!q.empty()){
         auto it=q.front();
         q.pop();
@@ -30,6 +31,7 @@ vector<int> topView(Node* root){
             q.push({node->right, line+1});
         }
     }
+
     for(auto it:mpp){
 	ans.push_back(it.second);
     }
