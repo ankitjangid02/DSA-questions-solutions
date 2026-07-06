@@ -51,6 +51,5 @@ int main() {
     
     for(int x:arr) cout<<x<<" ";
 
-    
     return 0;
 }
