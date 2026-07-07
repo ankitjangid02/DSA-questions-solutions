@@ -19,6 +19,7 @@ bool isSymmetricHelp(Node* left, Node* right){
     return isSymmetricHelp(left->left, right->right) && isSymmetricHelp(left->right, right->left);
 }
 
+// main function to check if the tree is symmetric or not
 bool isSymmetric(Node* root){
     return root==NULL || isSymmetricHelp(root->left, root->right);
 }
