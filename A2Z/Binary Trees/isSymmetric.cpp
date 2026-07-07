@@ -12,8 +12,7 @@ struct Node{
 };
 
 bool isSymmetricHelp(Node* left, Node* right){
-    if(left==NULL && right==NULL) return true;
-    if(left==NULL || right==NULL) return false;
+    if(left==NULL || right==NULL) return left==right;
     
     if(left->data!=right->data) return false;
     
