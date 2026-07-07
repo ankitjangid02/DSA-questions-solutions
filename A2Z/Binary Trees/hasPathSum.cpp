@@ -30,7 +30,6 @@ int main() {
     root->right->right=new Node(6);
     
     cout<<hasPathSum(root,3);
-
     
     return 0;
 }
