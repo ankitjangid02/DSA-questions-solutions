@@ -11,6 +11,7 @@ struct Node{
     }
 };
 
+// helper function to check if the left and right subtrees are symmetric
 bool isSymmetricHelp(Node* left, Node* right){
     if(left==NULL || right==NULL) return left==right;
     
