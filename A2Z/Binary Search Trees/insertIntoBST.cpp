@@ -14,6 +14,7 @@ struct Node{
 Node* insertIntoBST(Node* root, int val){
     
     if(root==NULL) return new Node(val);
+    
     Node* curr=root;
     while(true){
         if(curr->data<=val){
