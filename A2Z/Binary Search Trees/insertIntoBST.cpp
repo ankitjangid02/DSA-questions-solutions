@@ -12,6 +12,7 @@ struct Node{
 };
 
 Node* insertIntoBST(Node* root, int val){
+    
     if(root==NULL) return new Node(val);
     Node* curr=root;
     while(true){
@@ -39,7 +40,7 @@ void inOrder(Node* root){
     inOrder(root->left);
     cout<<root->data<<" ";
     inOrder(root->right);
-    
+
 }
 
 int main() {
