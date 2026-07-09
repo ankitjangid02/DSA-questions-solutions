@@ -36,7 +36,6 @@ Node* insertIntoBST(Node* root, int val){
 bool validateBST(Node* root, long minVal, long maxVal){
     if(root==nullptr) return true;
     if(root->data>=maxVal || root->data<=minVal) return false;
-    
     return validateBST(root->left, minVal, root->data) && validateBST(root->right, root->data, maxVal);
 }
 
