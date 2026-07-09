@@ -16,7 +16,7 @@ Node* insertIntoBST(Node* root, int val){
     if(root==NULL) return new Node(val);
 
     Node* curr=root;
-    
+
     while(true){
         if(curr->data<=val){
             if(curr->right!=NULL) curr=curr->right;
@@ -33,6 +33,7 @@ Node* insertIntoBST(Node* root, int val){
             }
         }
     }
+    
     return root;
 }
 
