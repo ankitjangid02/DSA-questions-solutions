@@ -29,6 +29,5 @@ int main() {
 
     cout<<searchBST(root,11)->data;
 
-    
     return 0;
 }
