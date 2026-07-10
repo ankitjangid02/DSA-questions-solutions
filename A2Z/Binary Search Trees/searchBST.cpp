@@ -12,6 +12,7 @@ struct Node{
 };
 
 Node* searchBST(Node* root, int val){
+    
     while(root!=NULL && root->data!=val){
         root=val < root->data ? root->left : root->right;
     }
@@ -27,7 +28,7 @@ int main() {
     root->left->right=new Node(5);
     root->right->right=new Node(11);
 
-    cout<<searchBST(root,11)->data;
+    Node* newNode=searchBST(root,11);
     cout<<newNode->data;
 
     return 0;
