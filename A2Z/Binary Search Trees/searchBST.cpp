@@ -12,10 +12,11 @@ struct Node{
 };
 
 Node* searchBST(Node* root, int val){
-    
+
     while(root!=NULL && root->data!=val){
         root=val < root->data ? root->left : root->right;
     }
+    
     return root;
 }
 
