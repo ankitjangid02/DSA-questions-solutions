@@ -28,6 +28,7 @@ int main() {
     root->right->right=new Node(11);
 
     cout<<searchBST(root,11)->data;
+    cout<<newNode->data;
 
     return 0;
 }
