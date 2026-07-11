@@ -34,13 +34,12 @@ Node* insertIntoBST(Node* root, int val){
 }
 
 void inOrder(Node* root, vector<int>& arr){
-
+    
     if(root){
         inOrder(root->left,arr);
         arr.push_back(root->data);
         inOrder(root->right,arr);
     }
-    
 }
 
 int kthSmallest(Node* root, int k){
