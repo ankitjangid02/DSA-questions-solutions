@@ -41,11 +41,13 @@ void inOrder(Node* root, vector<int>& arr){
     }
 }
 
-int kthLargest(Node* root, int k){
+int kthSmallest(Node* root, int k){
     vector<int> values;
     inOrder(root, values);
     
-    return values[values.size()-k];
+    int kth_Smallest=values[k-1];
+    
+    return kth_Smallest;
 }
 
 
@@ -57,7 +59,7 @@ int main() {
     root=insertIntoBST(root,16);
     root=insertIntoBST(root,5);
     
-    cout<<kthLargest(root, 2);
+    cout<<kthSmallest(root, 2);
 
     return 0;
 }
