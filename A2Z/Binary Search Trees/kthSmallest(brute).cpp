@@ -42,13 +42,14 @@ void inOrder(Node* root, vector<int>& arr){
 }
 
 int kthSmallest(Node* root, int k){
-    
+
     vector<int> values;
     inOrder(root, values);
     
     int kth_Smallest=values[k-1];
     
     return kth_Smallest;
+    
 }
 
 
