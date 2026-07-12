@@ -37,7 +37,7 @@ int k;
 int result;
 
 void inOrder(Node* root){
-
+    
     if(root!=nullptr){
         inOrder(root->left);
         if(--k==0){
@@ -46,7 +46,6 @@ void inOrder(Node* root){
         }
         inOrder(root->right);
     }    
-    
 }
 
 int kthSmallest(Node* root, int x){
