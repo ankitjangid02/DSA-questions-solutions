@@ -48,12 +48,10 @@ void inOrderReverse(Node* root){
 }
 
 int kthLargest(Node* root, int x){
-
     k=x;
     result=-1;
     inOrderReverse(root);
     return result;
-    
 }
 
 
