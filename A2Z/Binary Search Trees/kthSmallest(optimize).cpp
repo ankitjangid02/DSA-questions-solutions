@@ -37,6 +37,7 @@ int k;
 int result;
 
 void inOrder(Node* root){
+    
     if(root!=nullptr){
         inOrder(root->left);
         if(--k==0){
