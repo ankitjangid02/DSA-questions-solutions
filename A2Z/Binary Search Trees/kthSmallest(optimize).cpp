@@ -48,12 +48,11 @@ void inOrder(Node* root){
 }
 
 int kthSmallest(Node* root, int x){
-
+    
     k=x;
     result=-1;
     inOrder(root);
     return result;
-    
 }
 
 
