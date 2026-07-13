@@ -7,8 +7,9 @@ int main() {
     int adj[n+1][m+1];
     for(int i=0; i<m; i++){
         int u,v,w;
-        cin>>u>>v>>endl;
-        cin>>"weight">>w;
+        cin>>u>>v;
+        cout<<"weight";
+        cin>>w;
         adj[u][v]=w;
         adj[v][u]=w;
     }
