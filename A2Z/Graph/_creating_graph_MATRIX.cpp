@@ -9,7 +9,7 @@ int main() {
         int u,v;
         cin>>u>>v;
         adj[u][v]=1;
-        adj[v][u]=1;f
+        adj[v][u]=1;
     }
     return 0;
 }
