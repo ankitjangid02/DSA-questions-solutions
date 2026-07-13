@@ -5,6 +5,7 @@ int main() {
     int n,m;
     cin>> n>> m;
     vector<int> adj[n+1];
+    // O(E)
     for(int i=0; i<m; i++){
         int u, v;
         /// u--->v
