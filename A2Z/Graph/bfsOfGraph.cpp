@@ -2,6 +2,7 @@
 using namespace std;
 
 vector<int> bfsOfGraph(int V, vector<int> adj[]){
+    
     int vis[V]={0};
     vis[0]=1;
     queue<int> q;
@@ -20,7 +21,7 @@ vector<int> bfsOfGraph(int V, vector<int> adj[]){
         }
     }
     return bfs;
-    
+
 }
 int main() {
     int V=5;
