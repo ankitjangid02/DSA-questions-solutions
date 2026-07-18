@@ -1,0 +1,18 @@
+CODING-->
+OOPS
+DSA-
+	SORTING
+	TWO POINTER
+	RECURSION
+	BINARY SEARCH
+	TREES
+	GRAPHS
+	DP(Optional)
+DBMS
+OS
+CN
+
+INTERVIEW-->
+Introducton
+Projects
+Research Paper
