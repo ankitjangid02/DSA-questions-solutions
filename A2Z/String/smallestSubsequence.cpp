@@ -17,6 +17,7 @@ string smallestSubsequence(string s) {
         }
         ans.push_back(c);
         vis[c-'a']=true;
+        
     }
     return ans;
 }
