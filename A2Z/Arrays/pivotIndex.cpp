@@ -10,6 +10,7 @@ int pivotIndex(vector<int>& nums){
         if(left==total-left-nums[i]) return i;
         left+=nums[i];
     }
+
     return -1;
 }
 
