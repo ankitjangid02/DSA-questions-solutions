@@ -2,19 +2,27 @@
 using namespace std;
 
 int pivotIndex(vector<int>& nums){
-    int total=0;
-    for(int x:nums) total+=x;
-    
-    int left=0;
-    for(int i=0; i<nums.size()-1; i++){
-        if(left==total-left-nums[i]) return i;
-        left+=nums[i];
+    int low=0, high=nums.size()-1;
+    int left=nums[low], right=nums[high];
+    while(low<high){
+        if(left==right) break;
+        else if(left<right){
+            low++;
+            left=left+nums[low];
+        }
+        else{
+            high--;
+            right=right+nums[high];
+        }
     }
-    return -1;
+    if(low+1==high) return -1;
+    if(low==0) return low;
+    if(high==nums.size()-1) return high;
+    return low+1;
 }
 
 int main() {
-    vector<int> arr={1,7,3,6,5,6};
+    vector<int> arr={2,1,-1};
     cout<<pivotIndex(arr);
 
     return 0;
