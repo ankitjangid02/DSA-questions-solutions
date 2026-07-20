@@ -6,6 +6,7 @@ int pivotIndex(vector<int>& nums){
     for(int x:nums) total+=x;
     
     int left=0;
+
     for(int i=0; i<nums.size()-1; i++){
         if(left==total-left-nums[i]) return i;
         left+=nums[i];
