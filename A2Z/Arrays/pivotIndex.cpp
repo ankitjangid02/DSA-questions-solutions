@@ -5,7 +5,7 @@ int pivotIndex(vector<int>& nums){
     int low=0, high=nums.size()-1;
     int left=nums[low], right=nums[high];
     while(low<high){
-        if(left==right) break;
+        if(left==right) return low+1;
         else if(left<right){
             low++;
             left=left+nums[low];
