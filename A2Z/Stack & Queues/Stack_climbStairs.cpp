@@ -8,7 +8,7 @@ int climbStairs(int n) {
     int prev1=2;
 
     for(int i=3; i<=n; i++){
-        int curr=prev1+prev2;
+        int curr=prev2+prev1;
         prev2=prev1;
         prev1=curr;
     }
