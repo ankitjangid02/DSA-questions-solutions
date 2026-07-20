@@ -15,12 +15,12 @@ int pivotIndex(vector<int>& nums){
             right=right+nums[high];
         }
     }
-    if(low+1==high) return -1;
-    return low;
+    if(low+1==high && left==right) return -1;
+    return low+1;
 }
 
 int main() {
-    vector<int> arr={1,7,3,6,5,6};
+    vector<int> arr={2,1,-1};
     cout<<pivotIndex(arr);
 
     return 0;
