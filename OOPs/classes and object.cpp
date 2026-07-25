@@ -15,6 +15,16 @@ public:
     void changeDept(string newDept){
         dept=newDept;
     }
+    
+    //setter-set the vslue
+    void setSalary(double s){
+        salary=s;
+    }
+    
+    //getter-get the value
+    double getSalary(){
+        return salary;
+    }
 };
 
 int main() {
@@ -22,8 +32,9 @@ int main() {
     t1.name="Shradha";
     t1.subject="C++";
     t1.dept="Computer Science";
-    // t1.salary=25000;
+    t1.setSalary(25000);
     
-    cout<<t1.name;
+    cout<<t1.name<<endl;
+    cout<<t1.getSalary();
     return 0;
 }
