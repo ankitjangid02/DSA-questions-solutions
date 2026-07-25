@@ -6,38 +6,40 @@ class Teacher{
 private:
     double salary;
 public:
-    Teacher(){
-        cout<<"Hi, I am constructor!\n";
-    }
     //properties/attributes
     string name;
     string dept;
     string subject;
+    
+    //non-parameterized
+    Teacher(){
+        dept="Computer Science";
+    }
+    
+    //parameterized with this pointer
+    Teacher(string name, string dept, string subject, double salary){
+        this->name=name;
+        this->dept=dept;
+        this->subject=subject;
+        this->salary=salary;
+    }
     
     //methods/member functions
     void changeDept(string newDept){
         dept=newDept;
     }
     
-    //setter-set the vslue
-    void setSalary(double s){
-        salary=s;
-    }
-    
-    //getter-get the value
-    double getSalary(){
-        return salary;
+    void getInfo(){
+        cout<<"name:"<<name<<endl;
+        cout<<"subject:"<<subject<<endl;
     }
 };
 
 int main() {
-    Teacher t1; //constructor call
-    t1.name="Shradha";
-    t1.subject="C++";
-    t1.dept="Computer Science";
-    t1.setSalary(25000);
-    
-    cout<<t1.name<<endl;
-    cout<<t1.getSalary();
+    Teacher t1("Shradha", "Computer Science", "C++", 25000); //constructor call
+    // t1.getInfo();
+
+    Teacher t2(t1); // default copy constructor called here
+    t2.getInfo();
     return 0;
 }
