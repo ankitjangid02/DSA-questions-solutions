@@ -3,15 +3,14 @@
 using namespace std;
 
 class Teacher{
+public:
     //properties/attributes
-    public:
     string name;
     string dept;
     string subject;
     double salary;
     
     //methods/member functions
-    public:
     void changeDept(string newDept){
         dept=newDept;
     }
